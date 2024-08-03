@@ -77,7 +77,7 @@ def page_home():
 def page_data(new_df):
     #creating 2 columns in streamlit page for getting input from user
     st.markdown("""# <span style="color:aqua">Data Visualization</span>""",unsafe_allow_html=True)
-    file_ = open("C:/Users/2142866/GUVI_PROJECT_2/data-analysis.gif", "rb")
+    file_ = open("data-analysis.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
