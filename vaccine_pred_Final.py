@@ -99,6 +99,7 @@ def page_data(new_df):
 
 def page_predict():
     #creating 2 columns in streamlit page for getting input from user
+    st.markdown("""# <span style="color:aqua">Predict H1N1 Vaccine Status</span>""",unsafe_allow_html=True)
     col1,col2 = st.columns(2)
     
     with col1:
