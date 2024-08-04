@@ -67,8 +67,15 @@ new_df['census_msa']=new_df['census_msa'].map(census_mapping)
 
 
 def page_home():
-    st.title("Welcome to My Streamlit Dashboard")
-
+    st.title("Welcome to My ML Application")
+    file_ = open("ML_Gif.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+    st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+    unsafe_allow_html=True,
+)
     st.markdown("""## <span style="color:aqua">Problem Statement of this ML application:</span>""",unsafe_allow_html=True)
     st.markdown('This project aims to predict the likelihood of people taking an H1N1 flu vaccine using Logistic Regression. It involves analyzing a dataset containing various features related to individuals\' behaviors, perceptions, and demographics, and building a predictive model to determine vaccine acceptance.')
     st.markdown('Predict the probability of individuals taking an H1N1 flu vaccine based on theircharacteristics and attitudes. This can help healthcare professionals and policymakers target vaccination campaigns more effectively.')
